@@ -34,20 +34,20 @@ class MainApp(MDApp):
         box.add_widget(self.label)
 
         # Create a button with a text, size hint, position hint, and bind it to the increment_counter method
-        button = Button(text="Add", size_hint=(0.4, 0.2), pos_hint={'center_x': 0.5, 'center_y': 0.3},
-                        background_normal='assets/png_buttons/button-add.png',
-                        background_down='assets/png_buttons/button-add.png',
-                        background_color=(0, 0, 0, 1))
-        button.bind(on_press=self.increment_counter)
-        box.add_widget(button)
-
-        new_button = CircularButton(path='assets/png_buttons/button-add.png', size_hint=[None, None], width=150, height=150, background_color=[1, 0, 0, 1])
+        new_button = CircularButton(
+            on_pressed=self.increment_counter,
+            path='assets/png_buttons/button-add.png',
+            size_hint=[None, None],
+            width=100,
+            height=100,
+            background_color=[1, 0, 0, 1],
+            elevation=10)
         box.add_widget(new_button)
         # Return the layout to display the UI
         return layout
 
     # Define a method to increment the counter and update the label text
-    def increment_counter(self, obj):
+    def increment_counter(self):
         self.counter += 1
         self.label.text = str(self.counter)
 
