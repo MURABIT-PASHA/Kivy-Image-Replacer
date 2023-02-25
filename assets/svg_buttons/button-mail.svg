@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    
+    <title>Group + Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-+-Shape" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke-width="2" stroke="#58595B">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <circle id="Oval" cx="31" cy="31" r="31">
+</circle>
+                <path d="M31,5 C45.359,5 57,16.641 57,31" id="Shape">
+</path>
+                <path d="M31,57 C16.641,57 5,45.359 5,31" id="Shape">
+</path>
+            </g>
+            <path d="M35.84,32.318 C35.84,33.527 33.415,35.947 31.002,35.947 C27.373,35.947 26,32.892 26,31 C26,27.371 28.744,25.061 32.897,25.061 C37.05,25.061 35.975,25 35.975,25 L35.975,31.049 C35.975,33.94 36.675,35.04 38,35 C40.053,34.96 42.147,32.336 41.879,27.767 C41.54,21.968 37.718,18.602 31.499,18.965 C24.957,19.348 19.641,24.247 20.113,32.311 C20.501,38.945 25.063,42.345 31.002,41.997 C33.289,41.863 35.404,41.05 36.995,40.036" id="Shape" sketch:type="MSShapeGroup">
+</path>
+        </g>
+    </g>
+</svg>

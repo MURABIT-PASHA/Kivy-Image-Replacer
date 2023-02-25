@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    
+    <title>Button-circle-warning</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Button-circle-warning" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke="#6B6C6E" stroke-width="2">
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="31" cy="31" r="31">
+</circle>
+            <path d="M31,5 C45.4,5 57,16.6 57,31" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <path d="M31,57 C16.6,57 5,45.4 5,31" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="31.1" cy="47.1" r="4.1">
+</circle>
+            <path d="M34.9,17 C34.9,19.8 35.2,39 31,39 C26.8,39 27.1,19.8 27.1,17 C27.1,14.2 28.9,12 31,12 C33.1,12 34.9,14.2 34.9,17 L34.9,17 Z" id="Shape" sketch:type="MSShapeGroup">
+</path>
+        </g>
+    </g>
+</svg>

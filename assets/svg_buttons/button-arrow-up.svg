@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    
+    <title>Button-circle-upload</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Button-circle-upload" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke="#6B6C6E" stroke-width="2">
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="31" cy="31" r="31">
+</circle>
+            <path d="M31,5 C45.4,5 57,16.6 57,31" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <path d="M31,57 C16.6,57 5,45.4 5,31" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <path d="M36.1,34.9 L41.4,34.9 C41.8,34.9 42.1,34.6 42.1,34.2 L32,18.7 C31.7,18.3 30.9,18 30.6,18 L30.6,18 C30.6,18 29.4,18.3 29.1,18.7 L18.9,34.2 C18.9,34.6 19.2,34.9 19.6,34.9 L24.9,34.9" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <path d="M25.1,32.3 L25.1,44.9" id="Shape" sketch:type="MSShapeGroup">
+</path>
+            <path d="M36,32.1 L36,44.9" id="Shape" sketch:type="MSShapeGroup">
+</path>
+        </g>
+    </g>
+</svg>

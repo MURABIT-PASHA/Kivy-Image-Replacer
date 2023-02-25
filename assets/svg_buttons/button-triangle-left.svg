@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="800px" height="800px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<title>Button-circle-triangle-right</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="Button-circle-triangle-right" transform="translate(1.000000, 1.000000)" sketch:type="MSLayerGroup">
+		<circle id="Oval" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" cx="31" cy="31" r="31">
+		</circle>
+		<path id="Shape" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M31,5c14.4,0,26,11.6,26,26"/>
+		<path id="Shape_1_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M31,57C16.6,57,5,45.4,5,31"/>
+		<path id="Shape_2_" sketch:type="MSShapeGroup" fill="none" stroke="#6B6C6E" stroke-width="2" d="M35.9,42.3V20.5
+			c0-0.4-0.3-0.7-0.7-0.7L19.7,30c-0.4,0.3-0.7,1.5-0.7,1.5l0,0c0,0.3,0.3,1.1,0.7,1.4L35.2,43C35.6,43,35.9,42.7,35.9,42.3
+			L35.9,42.3z"/>
+	</g>
+</g>
+</svg>
