@@ -1,0 +1,91 @@
+#:import NavigationDrawerToolbar kivymd.uix.navigationdrawer.MDNavigationDrawerHeader
+#:import Toolbar kivymd.uix.toolbar.MDTopAppBar
+
+FloatLayout:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            id: home_toolbar
+            title: 'Home'
+            elevation: 5
+            left_action_items: [['menu', lambda x: nav_drawer.set_state("open") if nav_drawer.state == "close" else "open"]]
+            md_bg_color: (1, 0, 0, 1)
+        ScreenManager:
+            id:screen_manager
+            Screen:
+                name: 'home_screen'
+                MDFloatLayout:
+                    MDLabel:
+                        text: 'Welcome to the Home Screen!'
+                        halign: 'center'
+                        font_style: 'H2'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            Screen:
+                name: 'profile_screen'
+                MDFloatLayout:
+                    MDLabel:
+                        text: 'Welcome to the Profile Screen!'
+                        halign: 'center'
+                        font_style: 'H2'
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        MDBottomNavigation:
+            # panel_color: "#eeeaea"
+            selected_color_background: "orange"
+            text_color_active: "lightgrey"
+
+            MDBottomNavigationItem:
+                name: 'home_screen'
+                text: 'Home'
+                icon: 'home'
+                badge_icon: "numeric-10"
+                on_tab_press: screen_manager.current = 'home_screen'
+                MDLabel:
+                    text: 'Home'
+                    halign: 'center'
+
+            MDBottomNavigationItem:
+                name: 'profile_screen'
+                text: 'Profile'
+                icon: 'account'
+                badge_icon: ""
+                on_tab_press: screen_manager.current = 'profile_screen'
+                MDLabel:
+                    text: 'Profile'
+                    halign: 'center'
+    MDNavigationLayout:
+        x: 0
+        y: dp(48)
+        orientation: 'lr-tb'
+        screen_manager: screen_manager
+        MDNavigationDrawer:
+            id: nav_drawer
+            drawer_logo: "logo.png"
+
+            MDNavigationDrawerHeader:
+                title: "Drawer Header"
+                subtitle: "Drawer Subtitle"
+                elevation: 15
+
+            MDNavigationDrawerDivider:
+
+            ScrollView:
+
+                MDList:
+
+                    OneLineIconListItem:
+                        text: "Home"
+                        on_release: screen_manager.current = "home_screen"
+                        IconLeftWidget:
+                            icon: "home"
+
+                    OneLineIconListItem:
+                        text: "Profile"
+                        on_release: screen_manager.current = "profile_screen"
+                        IconLeftWidget:
+                            icon: "account"
+
+                    OneLineIconListItem:
+                        text: "Settings"
+                        IconLeftWidget:
+                            icon: "settings"
+
