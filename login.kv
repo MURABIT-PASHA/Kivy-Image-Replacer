@@ -1,0 +1,106 @@
+MDScreen:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        MDIconButton:
+            icon: "assets/png_buttons/button-arrow-left.png"
+            user_font_size: "35sp"
+            pos_hint: {"center_y": .95}
+        MDLabel:
+            text: "Back"
+            font_size: "18sp"
+            font_name: "assets/fonts/Poppins-Regular.ttf"
+            pos_hint: {"center_x": .615, "center_y": .95}
+        Image:
+            source: "assets/icon/logo.png"
+            size_hint: .26, .26
+            pos_hint: {"center_x": .22, "center_y": .8}
+        MDLabel:
+            text: "Proceed with your"
+            font_size: "22sp"
+            font_name: "assets/fonts/Poppins-Regular.ttf"
+            color: 0.05, 0.07, 0.09, 1
+            pos_hint: {"center_x": .6, "center_y": .65}
+        MDLabel:
+            text: "Login"
+            font_size: "28sp"
+            font_name: "assets/fonts/Poppins-Regular.ttf"
+            pos_hint: {"center_x": .6, "center_y": .58}
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .42}
+            MDLabel:
+                text: "Username"
+                font_size: "14sp"
+                font_name: "assets/fonts/Poppins-Regular.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "assets/fonts/Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                foreground_color: 0.05, 0.07, 0.09, 1
+                font_size: "17sp"
+                multiline: False
+            Image:
+                icon: "assets/png_buttons/button-person.png"
+                pos_hint: {"center_x": .96, "center_y": .5}
+                size_hint: .5, .5
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .0}
+                size_hint_y: .03
+                md_bg_color: 0.05, 0.07, 0.09, 1
+        MDFloatLayout:
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .28}
+            MDLabel:
+                text: "Password"
+                font_size: "14sp"
+                font_name: "assets/fonts/Poppins-Regular.ttf"
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                font_name: "assets/fonts/Poppins-Regular.ttf"
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 0, 0, 0, 0
+                cursor_color: 0, 0, 0, 1
+                cursor_width: "2sp"
+                font_size: "17sp"
+                multiline: False
+                password: True
+            Image:
+                icon: "assets/png_buttons/button-checked.png"
+                pos_hint: {"center_x": .96, "center_y": .5}
+                size_hint: .4, .4
+            MDFloatLayout:
+                pos_hint: {"center_x": .5, "center_y": .0}
+                size_hint_y: .03
+                md_bg_color: 0.05, 0.07, 0.09, 1
+        Button:
+            text: "Login"
+            background_color: 0, 0, 0, 0
+            font_name: "assets/fonts/Poppins-Regular.ttf"
+            size_hint: .79, .08
+            pos_hint: {"center_x": .5, "center_y": .15}
+            canvas.before:
+                Color:
+                    rgba: 0.05, 0.07, 0.09, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [15]
+        MDTextButton:
+            text: "Forget Password?"
+            font_size: "13sp"
+            pos_hint: {"center_x": .5, "center_y": .07}
+            halign: "center"
+            color: 0.47, 0.47, 0.47, 1
+
+
+
+
+
+
+

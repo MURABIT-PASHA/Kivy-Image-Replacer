@@ -1,84 +1,84 @@
 #:import NavigationDrawerToolbar kivymd.uix.navigationdrawer.MDNavigationDrawerHeader
 #:import Toolbar kivymd.uix.toolbar.MDTopAppBar
 #:import FloatingActionButtonSpeedDial kivymd.uix.button.MDFloatingActionButtonSpeedDial
-
-FloatLayout:
-    MDBoxLayout:
-        id: scaffold
-        orientation: 'vertical'
-        MDTopAppBar:
-            id: appbar
-            title: 'Home'
-            elevation: 5
-            left_action_items: [['menu', lambda x: nav_drawer.set_state("open") if nav_drawer.state == "close" else "open"]]
-            md_bg_color: (0.09, 0.11, 0.13, 1)
-        ScreenManager:
-            id:screen_manager
-            Screen:
-                name: 'home_screen'
-                MDBoxLayout:
-                    orientation: 'vertical'
-                    MDFloatLayout:
-                        MDLabel:
-                            text: 'Welcome to the Home Screen!'
-                            halign: 'center'
-                            font_style: 'H2'
-                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-            Screen:
-                name: 'profile_screen'
-                MDBoxLayout:
-                    orientation: 'vertical'
-                    MDFloatLayout:
-                        MDBoxLayout:
+MDScreen:
+    FloatLayout:
+        MDBoxLayout:
+            id: scaffold
+            orientation: 'vertical'
+            MDTopAppBar:
+                id: appbar
+                title: 'Home'
+                elevation: 5
+                left_action_items: [['menu', lambda x: nav_drawer.set_state("open") if nav_drawer.state == "close" else "open"]]
+                md_bg_color: (0.09, 0.11, 0.13, 1)
+            ScreenManager:
+                id:screen_manager
+                Screen:
+                    name: 'home_screen'
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        MDFloatLayout:
                             MDLabel:
-                                text: 'Welcome to the Profile Screen!'
+                                text: 'Welcome to the Home Screen!'
                                 halign: 'center'
                                 font_style: 'H2'
                                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                        MDFloatingActionButtonSpeedDial:
-                            size_hint: None, None
-                            size: dp(56), dp(56)
-                            data: app.floating_action_options
-                            root_button_anim: True
-                            hint_animation: True
-                            button_color: app.theme_cls.primary_color
-                            color_normal: app.theme_cls.primary_light
-                            color_hover: app.theme_cls.primary_dark
-                            bg_hint_color: app.theme_cls.primary_color
-        MDBottomNavigation:
-            # panel_color: "#eeeaea"
-            selected_color_background: "orange"
-            text_color_active: "lightgrey"
+                Screen:
+                    name: 'profile_screen'
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        MDFloatLayout:
+                            MDBoxLayout:
+                                MDLabel:
+                                    text: 'Welcome to the Profile Screen!'
+                                    halign: 'center'
+                                    font_style: 'H2'
+                                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                            MDFloatingActionButtonSpeedDial:
+                                size_hint: None, None
+                                size: dp(56), dp(56)
+                                data: app.floating_action_options
+                                root_button_anim: True
+                                hint_animation: True
+                                button_color: app.theme_cls.primary_color
+                                color_normal: app.theme_cls.primary_light
+                                color_hover: app.theme_cls.primary_dark
+                                bg_hint_color: app.theme_cls.primary_color
+            MDBottomNavigation:
+                # panel_color: "#eeeaea"
+                selected_color_background: "orange"
+                text_color_active: "lightgrey"
 
-            MDBottomNavigationItem:
-                name: 'home_screen'
-                text: 'Home'
-                icon: 'home'
-                badge_icon: "numeric-10"
-                on_tab_press: screen_manager.current = 'home_screen'
+                MDBottomNavigationItem:
+                    name: 'home_screen'
+                    text: 'Home'
+                    icon: 'home'
+                    badge_icon: "numeric-10"
+                    on_tab_press: screen_manager.current = 'home_screen'
 
-            MDBottomNavigationItem:
-                name: 'profile_screen'
-                text: 'Profile'
-                icon: 'account'
-                badge_icon: ""
-                on_tab_press: screen_manager.current = 'profile_screen'
+                MDBottomNavigationItem:
+                    name: 'profile_screen'
+                    text: 'Profile'
+                    icon: 'account'
+                    badge_icon: ""
+                    on_tab_press: screen_manager.current = 'profile_screen'
 
-    MDNavigationLayout:
-        MDNavigationDrawer:
-            id: nav_drawer
-            # TODO: Add app icon here
-            MDBoxLayout:
-                orientation: 'vertical'
-                MDNavigationDrawerHeader:
-                    title: "Image Enhancer"
-                    subtitle: "Drawer Subtitle"
-                    elevation: 15
-                MDNavigationDrawerDivider:
-                MDList:
-                    OneLineIconListItem:
-                        text: "Logout"
-                        #  TODO: Add logout section here
-                        IconLeftWidget:
-                            icon: "logout"
+        MDNavigationLayout:
+            MDNavigationDrawer:
+                id: nav_drawer
+                # TODO: Add app icon here
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDNavigationDrawerHeader:
+                        title: "Image Enhancer"
+                        subtitle: "Drawer Subtitle"
+                        elevation: 15
+                    MDNavigationDrawerDivider:
+                    MDList:
+                        OneLineIconListItem:
+                            text: "Logout"
+                            #  TODO: Add logout section here
+                            IconLeftWidget:
+                                icon: "logout"
 

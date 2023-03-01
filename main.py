@@ -1,6 +1,11 @@
 # Import necessary Kivy and KivyMD modules
+from kivy.clock import Clock
+from kivy.core.window import Window
+from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
 from kivymd.app import MDApp
+
+Window.size = (350, 580)
 
 
 # Define the main app class that inherits from MDApp
@@ -12,20 +17,23 @@ class MainApp(MDApp):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.counter = 0  # Initialize counter attribute to zero
 
     # Define the build method that returns the app's UI
     def build(self):
-        self.theme_cls.theme_style = "Dark"  # or "Light", "normal", "darkest"
+        global screen_manager
+        screen_manager = ScreenManager()
+        screen_manager.add_widget(Builder.load_file("splash.kv"))
+        screen_manager.add_widget(Builder.load_file("login.kv"))
+        screen_manager.add_widget(Builder.load_file("home.kv"))
+        self.theme_cls.theme_style = "Dark"
         # self.theme_cls.primary_color = (0.05, 0.07, 0.09, 1)
-        return Builder.load_file('home.kv')
+        return screen_manager
 
-    # Define a method to increment the counter and update the label text
-    def increment_counter(self):
-        self.counter += 1
-        self.root.ids.label.text = str(self.counter)
+    def on_start(self):
+        Clock.schedule_once(self.login, 5)
 
+    def login(self, *args):
+        screen_manager.current = "login"
 
-# Create an instance of the MainApp class and run it
 if __name__ == "__main__":
     MainApp().run()
