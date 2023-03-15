@@ -1,5 +1,5 @@
-<ImagePicker>
-    id: image_picker
+MDScreen:
+    name: 'image_picker'
     MDBoxLayout:
         orientation: "vertical"
         size: root.width, root.height
@@ -9,4 +9,4 @@
 
         FileChooserIconView:
             id: filechooser
-            on_selection: image_picker.selection(filechooser.selection)
+            on_selection: app.selection(filechooser.selection)
