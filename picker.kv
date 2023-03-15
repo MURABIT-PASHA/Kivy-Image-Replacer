@@ -1,0 +1,12 @@
+<ImagePicker>
+    id: image_picker
+    MDBoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 20
+
+        FileChooserIconView:
+            id: filechooser
+            on_selection: image_picker.selection(filechooser.selection)

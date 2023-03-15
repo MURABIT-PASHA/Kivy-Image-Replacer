@@ -36,16 +36,21 @@ MDScreen:
                                     font_style: 'H2'
                                     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                             MDFloatingActionButtonSpeedDial:
+                                id: speed_dial
+                                on_press_stack_button: app.open_image_picker(self)
                                 size_hint: None, None
                                 size: dp(56), dp(56)
-                                data: app.floating_action_options
+                                data: {'Camera': 'camera','Gallery': 'image'}
                                 root_button_anim: True
                                 hint_animation: True
                                 button_color: app.theme_cls.primary_color
                                 color_normal: app.theme_cls.primary_light
                                 color_hover: app.theme_cls.primary_dark
                                 bg_hint_color: app.theme_cls.primary_color
+                                MDFloatingBottomButton:
+                                    on_enter: print("Which button")
             MDBottomNavigation:
+                id: bottom_nav
                 # panel_color: "#eeeaea"
                 selected_color_background: "orange"
                 text_color_active: "lightgrey"
