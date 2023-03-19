@@ -1,3 +1,4 @@
+import cv2
 from kivy.animation import Animation
 from kivy.clock import Clock
 from kivy.core.window import Window
@@ -21,17 +22,18 @@ class MainApp(MDApp):
         self.text_anim = None
         self.home_screen = Builder.load_file('home.kv')
         self.splash_screen = Builder.load_file('splash.kv')
-        self.gallery_screen = Builder.load_file('picker.kv')
+        self.picker_screen = Builder.load_file('picker.kv')
         self.paint_screen = Builder.load_file('painter.kv')
         self.screen_manager = ScreenManager()
         self.speed_dial_buttons = []
         self.file_directory = ""
+        self.picker_setting = ""
 
     # Define the build method that returns the app's UI
     def build(self):
         self.screen_manager.add_widget(self.splash_screen)
         self.screen_manager.add_widget(self.home_screen)
-        self.screen_manager.add_widget(self.gallery_screen)
+        self.screen_manager.add_widget(self.picker_screen)
         self.screen_manager.add_widget(self.paint_screen)
         self.theme_cls.theme_style = "Dark"
         return self.screen_manager
@@ -59,10 +61,12 @@ class MainApp(MDApp):
                                    isinstance(button, MDFloatingBottomButton)]
 
         def on_press_first_button():
-            self.screen_manager.current = self.gallery_screen.name
+            self.picker_setting = "gallery"
+            self.screen_manager.current = self.picker_screen.name
 
         def on_press_second_button():
-            print("Camera")
+            self.picker_setting = "camera"
+            self.screen_manager.current = self.picker_screen.name
 
         if self.speed_dial_buttons[0] and self.speed_dial_buttons[1] is not None:
             first_button = self.speed_dial_buttons[0]
@@ -74,6 +78,19 @@ class MainApp(MDApp):
         self.file_directory = filename[0]
         if self.file_directory.endswith(".png") or self.file_directory.endswith(".jpg"):
             self.screen_manager.current = self.paint_screen.name
+
+    def take_picture(self, img_data):
+        # Process with opencv
+        img = cv2.flip(cv2.cvtColor(img_data, cv2.COLOR_RGBA2BGR), 0)
+
+        # save file
+        self.file_directory = 'image.jpg'
+        cv2.imwrite(self.file_directory, img)
+
+    def show_picture(self, widget):
+        widget.source = self.file_directory
+        widget.reload()
+
 
 
 if __name__ == "__main__":

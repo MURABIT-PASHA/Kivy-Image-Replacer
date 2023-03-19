@@ -1,12 +1,37 @@
 MDScreen:
+    on_enter: screen_manager.current = f'{app.picker_setting}_screen'
     name: 'image_picker'
-    MDBoxLayout:
-        orientation: "vertical"
-        size: root.width, root.height
+    ScreenManager:
+        id:screen_manager
+        Screen:
+            name: 'gallery_screen'
+            MDBoxLayout:
+                orientation: "vertical"
+                size: root.width, root.height
 
-        padding: 50
-        spacing: 20
+                padding: 50
+                spacing: 20
 
-        FileChooserIconView:
-            id: filechooser
-            on_selection: app.selection(filechooser.selection)
+                FileChooserIconView:
+                    id: filechooser
+                    on_selection: app.selection(filechooser.selection)
+        Screen:
+            name: 'camera_screen'
+            MDBoxLayout:
+                orientation: "vertical"
+                size: root.width, root.height
+
+                padding: 50
+                spacing: 20
+
+                Camera:
+                    id: camera
+                    resolution: (640, 480)
+
+                Button:
+                    text: 'Take Picture'
+                    on_press: app.take_picture(camera.texture.pixels)
+
+                Image:
+                    id: img
+                    on_touch_down: app.show_picture(img)
